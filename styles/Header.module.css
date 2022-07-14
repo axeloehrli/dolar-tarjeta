@@ -1,5 +1,9 @@
 .header {
-  padding: 14px 20px;
   background-color: #85BB65;
   color: #ffffff;
+}
+.headerWrapper {
+  padding: 14px 20px;
+  margin: auto;
+  max-width: 1000px;
 }

@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import { formatRelative, parseISO } from 'date-fns'
 import Header from '../components/Header'
 import DollarCalculation from "../classes/DollarCalculation"
-import {es} from "date-fns/locale"
+import { es } from "date-fns/locale"
 export default function Home({ error, currentDollarInfo }) {
   const formatter = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS" })
   const [inputValue, setInputValue] = useState(1)
@@ -32,14 +32,13 @@ export default function Home({ error, currentDollarInfo }) {
   }
   console.log(currentDollarInfo);
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
-        <title>Dólar tarjeta</title>
+        <title>Calculadora dólar tarjeta</title>
         <meta name='keywords' content='dolar tarjeta convertir' />
       </Head>
-      <Header />
-      <div className={styles.main}>
-        <h1 className={styles.header}>Calculadora "Dólar tarjeta" + Impuesto País del 30% + Retención del 35%</h1>
+      <main className={styles.main}>
+        <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Retención del 35%</h1>
         <div className={styles.inputs}>
           <label className={styles.inputLabel} htmlFor='dollars'>Cantidad de dólares (USD)</label>
           <div className={styles.inputContainer}>
@@ -74,9 +73,39 @@ export default function Home({ error, currentDollarInfo }) {
           </div>
           <p className={styles.dollarCotizacion}>COTIZACIÓN DOLAR OFICIAL</p>
           <p className={styles.infoP}>1 USD = <span className={styles.total}>{currentDollarInfo.price}</span> ARS</p>
-          <p className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), {locale:es})}</p>
+          <p className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), { locale: es })}</p>
         </div>
-      </div>
+        <div className={styles.dolarTarjetaInfo}>
+          <div className={styles.dolarTarjetaInfoContainer}>
+            <h2>¿Qué es el dólar tarjeta?</h2>
+            <p>
+              También conocido como "Dólar turista", el dólar tarjeta
+              es el que se paga por realizar compras fuera del país,
+              o dentro del país si se trata de servicios dolarizados,
+              como Spotify o Netflix.
+            </p>
+          </div>
+          <div className={styles.dolarTarjetaInfoContainer}>
+            <h2>¿Cómo se calcula el precio del dólar tarjeta?</h2>
+            <p>
+              El precio del dólar tarjeta se calcula utilizando
+              la cotización del dólar del mercado oficial, sumándole
+              el 30% del impuesto PAÍS y el 35% del impuesto a las ganancias.
+            </p>
+          </div>
+          <div className={styles.dolarTarjetaInfoContainer}>
+            <h2>¿En qué transacciones se utiliza el dólar tarjeta?</h2>
+            <p> - <strong>Compra de divisas</strong> como el Dólar o el Euro</p>
+            <p> - Pago de <strong>servicios o bienes extranjeros</strong>, tales como Spotify o Netflix</p>
+            <p> - Compra de <strong>pasajes a países extranjeros</strong>, ya sean aéreos,
+              terrestres o acuáticos.
+            </p>
+          </div>
+        </div>
+      </main>
+      <aside className={styles.aside}>
+
+      </aside>
     </div>
   )
 }

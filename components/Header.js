@@ -2,8 +2,10 @@ import styles from "../styles/Header.module.css"
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <h1>Dólar tarjeta</h1>
-    </div>
+    <header className={styles.header}>
+      <div className={styles.headerWrapper}>
+        <h1>Dólar tarjeta</h1>
+      </div>
+    </header>
   )
 }

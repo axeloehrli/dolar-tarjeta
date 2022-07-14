@@ -27,7 +27,7 @@ const scrapeWebsite = async () => {
 
     return parseFloat(formattedDollarPrice)
   } catch (error) {
-    console.log(error);
+    console.log("SCRAPE WEBSITE ERROR:",error);
   }
 }
 
@@ -41,7 +41,7 @@ const saveDollarPrice = async () => {
   }
   /* If new price is different than prev price,
   push it to the database */
-  db.insertDollarPrice(await scrapeWebsite())
+  db.insertDollarPrice(newDollarPrice)
 }
 
 const fetchPrevDollarPrice = async () => {
@@ -50,15 +50,16 @@ const fetchPrevDollarPrice = async () => {
     const res = await req.json()
     return parseFloat(res[0].price)
   } catch (error) {
-    console.log(error);
+    console.log("FETCH PREV DOLLAR PRICE ERROR:",error);
   }
 }
 
-const schedule = (fn, time) => {
+const schedule = (fn, time, isFirstTime) => {
+  if (isFirstTime) fn()
   setTimeout(() => {
     fn()
-    schedule(fn, time)
+    schedule(fn, time, false)
   }, time);
 }
 
-schedule(saveDollarPrice, 30000)
+schedule(saveDollarPrice, 30000, true)

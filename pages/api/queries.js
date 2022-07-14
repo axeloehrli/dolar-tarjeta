@@ -17,6 +17,7 @@ const getDollarPrice = (req, res) => {
 }
 
 const insertDollarPrice = (value) => {
+  if (value === undefined && value === null) return;
   const sqlStatement = `INSERT INTO dolar_info (price) VALUES (${value})`
   const date = new Date()
   console.log(date.getHours(), ":", date.getMinutes(), value);

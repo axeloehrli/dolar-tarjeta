@@ -1,5 +1,18 @@
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  border-right: 1px solid gray;
+}
+
 .main {
+  flex: 2;
   padding: 20px;
+}
+
+.aside {
+  display: none;
+  flex: 1;
 }
 
 .header {
@@ -81,4 +94,23 @@
 .updateTime {
   font-size: 14px;
   color: gray;
+}
+
+.dolarTarjetaInfo {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dolarTarjetaInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (min-width:700px) {
+  .aside {
+    display: block;
+  }
 }
