@@ -7,3 +7,15 @@
   margin: auto;
   max-width: 1000px;
 }
+
+@media (min-width: 600px) {
+  .headerWrapper {
+    padding: 14px 56px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .headerWrapper {
+    padding: 14px 20px;
+  }
+}

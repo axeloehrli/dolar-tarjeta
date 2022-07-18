@@ -1,5 +1,5 @@
 const IMPUESTO_PAIS = 0.3
-const IMPUESTO_A_LAS_GANANCIAS = 0.35
+const IMPUESTO_A_LAS_GANANCIAS = 0.45
 
 export default class DollarCalculation {
   constructor(dollarAmount, currentDollarInfo) {
