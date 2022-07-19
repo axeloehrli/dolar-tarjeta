@@ -73,7 +73,7 @@ export default function Home({ error, currentDollarInfo }) {
           </div>
           <p className={styles.dollarCotizacion}>COTIZACIÓN DOLAR OFICIAL</p>
           <p className={styles.infoP}>1 USD = <span className={styles.total}>{currentDollarInfo.price}</span> ARS</p>
-          <p className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), { locale: es })}</p>
+          <p suppressHydrationWarning className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), { locale: es })}</p>
         </div>
         <div className={styles.dolarTarjetaInfo}>
           <div className={styles.dolarTarjetaInfoContainer}>
@@ -103,8 +103,8 @@ export default function Home({ error, currentDollarInfo }) {
           </div>
           <div className={styles.dolarTarjetaInfoContainer}>
             <h2>¿En qué operaciones no aplica el dólar tarjeta?</h2>
-            <p> - Compras de libros y utilización de plataformas educativas</p>
-            <p> - Gastos relacionados a la salud ( como medicamentos)</p>
+            <p> - Compras de <strong>libros</strong> y utilización de <strong>plataformas educativas</strong></p>
+            <p> - Gastos relacionados a la salud (como <strong></strong>)</p>
             <p> - Compra de <strong>pasajes a países extranjeros</strong>, ya sean aéreos,
               terrestres o acuáticos.
             </p>

@@ -99,10 +99,10 @@
 }
 
 .dolarTarjetaInfo {
-  margin-top: 18px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .dolarTarjetaInfoContainer {
@@ -116,7 +116,6 @@
 }
 .dolarTarjetaInfoContainer > p {
   color: rgb(31, 30, 30);
-  line-height: 1.5rem;
 }
 
 
@@ -133,7 +132,6 @@
   .dolarTarjetaInfoContainer > p {
     font-size: 17px;
     color: rgb(31, 30, 30);
-    line-height: 1.5rem;
   }
 }
 
