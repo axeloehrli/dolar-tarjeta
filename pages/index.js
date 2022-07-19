@@ -104,7 +104,7 @@ export default function Home({ error, currentDollarInfo }) {
           <div className={styles.dolarTarjetaInfoContainer}>
             <h2>¿En qué operaciones no aplica el dólar tarjeta?</h2>
             <p> - Compras de <strong>libros</strong> y utilización de <strong>plataformas educativas</strong></p>
-            <p> - Gastos relacionados a la salud (como <strong></strong>)</p>
+            <p> - Gastos relacionados a la salud (como <strong>medicamentos</strong>)</p>
             <p> - Compra de <strong>pasajes a países extranjeros</strong>, ya sean aéreos,
               terrestres o acuáticos.
             </p>
