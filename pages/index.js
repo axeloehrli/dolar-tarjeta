@@ -38,7 +38,7 @@ export default function Home({ error, currentDollarInfo }) {
         <meta name='keywords' content='dolar tarjeta convertir' />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Retención del 45%</h1>
+        <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Ganancias del 45%</h1>
         <div className={styles.inputs}>
           <label className={styles.inputLabel} htmlFor='dollars'>Cantidad de dólares (USD)</label>
           <div className={styles.inputContainer}>
