@@ -3,9 +3,9 @@ import Head from 'next/head'
 import React, { useState } from "react"
 import styles from '../styles/Home.module.css'
 import { formatRelative, parseISO } from 'date-fns'
-import Header from '../components/Header'
 import DollarCalculation from "../classes/DollarCalculation"
 import { es } from "date-fns/locale"
+import Adsense from '../components/AdsenseContainer'
 export default function Home({ error, currentDollarInfo }) {
   const formatter = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS" })
   const [inputValue, setInputValue] = useState(1)
@@ -30,7 +30,7 @@ export default function Home({ error, currentDollarInfo }) {
       </div>
     )
   }
-  console.log(currentDollarInfo);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -38,6 +38,7 @@ export default function Home({ error, currentDollarInfo }) {
         <meta name='keywords' content='dolar tarjeta convertir' />
       </Head>
       <main className={styles.main}>
+        <Adsense />
         <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Ganancias del 45%</h1>
         <div className={styles.inputs}>
           <label className={styles.inputLabel} htmlFor='dollars'>Cantidad de dólares (USD)</label>
