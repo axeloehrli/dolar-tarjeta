@@ -38,7 +38,7 @@ export default function Home({ error, currentDollarInfo }) {
         <meta name='keywords' content='dolar tarjeta convertir' />
       </Head>
       <main className={styles.main}>
-        <GoogleAd />
+       {/*  <GoogleAd /> */}
         <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Ganancias del 45%</h1>
         <div className={styles.inputs}>
           <label className={styles.inputLabel} htmlFor='dollars'>Cantidad de dólares (USD)</label>
@@ -76,7 +76,7 @@ export default function Home({ error, currentDollarInfo }) {
           <p className={styles.infoP}>1 USD = <span className={styles.total}>{currentDollarInfo.price}</span> ARS</p>
           <p suppressHydrationWarning className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), { locale: es })}</p>
         </div>
-        <GoogleAd />
+        {/* <GoogleAd /> */}
         <div className={styles.dolarTarjetaInfo}>
           <div className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Qué es el dólar tarjeta?</h2>
