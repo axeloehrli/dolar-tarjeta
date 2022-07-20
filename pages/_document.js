@@ -8,7 +8,7 @@ export default function Document() {
         <script dangerouslySetInnerHTML={{
           __html: `
         (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-4127654850827260",
+            google_ad_client: "ca-pub-7866516229172545",
             enable_page_level_ads: true
             });
             `,
