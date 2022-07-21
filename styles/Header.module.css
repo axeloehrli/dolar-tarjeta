@@ -8,6 +8,10 @@
   max-width: 1000px;
 }
 
+.h2 {
+  font-size: 2em;
+}
+
 @media (min-width: 600px) {
   .headerWrapper {
     padding: 14px 56px;

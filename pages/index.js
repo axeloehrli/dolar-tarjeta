@@ -19,26 +19,15 @@ export default function Home({ error, currentDollarInfo }) {
   const handleButtonClick = () => {
     setDollarCalculation(new DollarCalculation(inputValue, currentDollarInfo))
   }
-  if (error) {
-    return (
-      <div className={styles.container}>
-        <Head>
-          <title>Dólar tarjeta</title>
-          <meta name='keywords' content='dolar tarjeta convertir' />
-        </Head>
-        <h1>There was an error fetching data</h1>
-      </div>
-    )
-  }
-
   return (
     <div className={styles.container}>
       <Head>
         <title>Calculadora dólar tarjeta</title>
         <meta name='keywords' content='dolar tarjeta convertir' />
+        <meta name="description" content='Calculadora dolar tarjeta actualizada (35% PAÍS y 45% GANANCIAS)' />
       </Head>
       <main className={styles.main}>
-       {/*  <GoogleAd /> */}
+        {/*  <GoogleAd /> */}
         <h1 className={styles.header}>Calculadora "Dólar tarjeta": Impuesto País del 30% + Ganancias del 45%</h1>
         <div className={styles.inputs}>
           <label className={styles.inputLabel} htmlFor='dollars'>Cantidad de dólares (USD)</label>
@@ -81,7 +70,7 @@ export default function Home({ error, currentDollarInfo }) {
           <div className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Qué es el dólar tarjeta?</h2>
             <p>
-              También conocido como <strong>"Dólar turista"</strong>, el dólar tarjeta
+              También conocido como "Dólar turista", el dólar tarjeta
               es el que se paga por realizar compras fuera del país,
               o dentro del país si se trata de servicios dolarizados,
               como Spotify o Netflix.
@@ -105,10 +94,16 @@ export default function Home({ error, currentDollarInfo }) {
           </div>
           <div className={styles.dolarTarjetaInfoContainer}>
             <h2>¿En qué operaciones no aplica el dólar tarjeta?</h2>
-            <p> - Compras de <strong>libros</strong> y utilización de <strong>plataformas educativas</strong></p>
-            <p> - Gastos relacionados a la salud (como <strong>medicamentos</strong>)</p>
-            <p> - Compra de <strong>pasajes a países extranjeros</strong>, ya sean aéreos,
-              terrestres o acuáticos.
+            <p> - Compras de <strong>libros</strong> y utilización de plataformas educativas</p>
+            <p> - Gastos relacionados a la salud (como medicamentos)</p>
+          </div>
+          <div className={styles.dolarTarjetaInfoContainer}>
+            <h2>¿Desde cuándo se paga el 45% de ganancias?</h2>
+            <p>A partir del <strong>14 de Julio del 2022</strong>, la Administración Nacional de Ingresos Públicos (AFIP)
+              subió la percepción por bienes y ganancias un 10%, saltando de 35% a 45%. La AFIP afirmó
+              que la decisión de avanzar con la modificación fue tomada con fines del "robustecer el
+              frente fiscal". Hizo también foco en la capacidad contributiva de los sectores económicos
+              que utilizan el dólar tarjeta como medio de cambio para compras extranjeras y servicios dolarizados.
             </p>
           </div>
         </div>
