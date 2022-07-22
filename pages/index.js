@@ -23,7 +23,7 @@ export default function Home({ error, currentDollarInfo }) {
     <div className={styles.container}>
       <Head>
         <title>Calculadora dólar tarjeta</title>
-        <meta name='keywords' content='dolar tarjeta convertir' />
+        <meta name='keywords' content='dolar tarjeta calculadora convertir 45% impuesto ganancias 35% impuesto pais' />
         <meta name="description" content='Calculadora dolar tarjeta actualizada (35% PAÍS y 45% GANANCIAS)' />
       </Head>
       <main className={styles.main}>
@@ -66,8 +66,8 @@ export default function Home({ error, currentDollarInfo }) {
           <p suppressHydrationWarning className={styles.updateTime}>Actualizado {formatRelative(parseISO(currentDollarInfo.fetched_at), new Date(), { locale: es })}</p>
         </div>
         {/* <GoogleAd /> */}
-        <div className={styles.dolarTarjetaInfo}>
-          <div className={styles.dolarTarjetaInfoContainer}>
+        <ul className={styles.dolarTarjetaInfo}>
+          <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Qué es el dólar tarjeta?</h2>
             <p>
               También conocido como "Dólar turista", el dólar tarjeta
@@ -75,29 +75,29 @@ export default function Home({ error, currentDollarInfo }) {
               o dentro del país si se trata de servicios dolarizados,
               como Spotify o Netflix.
             </p>
-          </div>
-          <div className={styles.dolarTarjetaInfoContainer}>
+          </li>
+          <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Cómo se calcula el precio del dólar tarjeta?</h2>
             <p>
               El precio del dólar tarjeta se calcula utilizando
               la cotización del dólar del mercado oficial, sumándole
               el 30% del <strong>impuesto PAÍS</strong> y el 45% del <strong>impuesto a las ganancias</strong>.
             </p>
-          </div>
-          <div className={styles.dolarTarjetaInfoContainer}>
+          </li>
+          <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿En qué transacciones se utiliza el dólar tarjeta?</h2>
             <p> - <strong>Compra de divisas</strong> como el Dólar o el Euro.</p>
             <p> - Pago de <strong>servicios o bienes extranjeros</strong>, tales como Spotify o Netflix.</p>
             <p> - Compra de <strong>pasajes a países extranjeros</strong>, ya sean aéreos,
               terrestres o acuáticos.
             </p>
-          </div>
-          <div className={styles.dolarTarjetaInfoContainer}>
+          </li>
+          <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿En qué operaciones no aplica el dólar tarjeta?</h2>
             <p> - Compras de <strong>libros</strong> y utilización de plataformas educativas</p>
             <p> - Gastos relacionados a la salud (como medicamentos)</p>
-          </div>
-          <div className={styles.dolarTarjetaInfoContainer}>
+          </li>
+          <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Desde cuándo se paga el 45% de ganancias?</h2>
             <p>A partir del <strong>14 de Julio del 2022</strong>, la Administración Nacional de Ingresos Públicos (AFIP)
               subió la percepción por bienes y ganancias un 10%, saltando de 35% a 45%. La AFIP afirmó
@@ -105,8 +105,8 @@ export default function Home({ error, currentDollarInfo }) {
               frente fiscal". Hizo también foco en la capacidad contributiva de los sectores económicos
               que utilizan el dólar tarjeta como medio de cambio para compras extranjeras y servicios dolarizados.
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </main>
       <aside className={styles.aside}>
 
