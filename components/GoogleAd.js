@@ -17,12 +17,15 @@ export function GoogleAd() {
     >
       <ins
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: "block" }}
         data-ad-client="ca-pub-7866516229172545"
         data-ad-slot="9033093666"
         data-ad-format="auto"
         data-full-width-responsive="true"
-      />
+      > </ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({ });
+      </script>
     </div>
   );
 }
