@@ -14,6 +14,37 @@
   font-size: 2em;
 }
 
+.navbarContainer {
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: -100%;
+  display: flex;
+}
+
+.navbarContainerActive {
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+}
+
+.navbar {
+  max-width: 300px;
+  flex: 2;
+  background-color: white;
+}
+
+.navbarMask {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.342);
+}
+
 @media (min-width: 600px) {
   .headerWrapper {
     padding: 14px 56px;
