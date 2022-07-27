@@ -6,6 +6,8 @@
   padding: 14px 20px;
   margin: auto;
   max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .h2 {
