@@ -38,11 +38,27 @@
   max-width: 300px;
   flex: 2;
   background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .navbarMask {
   flex: 1;
   background-color: rgba(0, 0, 0, 0.342);
+}
+
+.navbarParagraph {
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(70, 70, 70);
+}
+
+.navbarParagraph:hover {
+  color: #85BB65;
 }
 
 @media (min-width: 600px) {
