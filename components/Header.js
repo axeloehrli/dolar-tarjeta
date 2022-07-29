@@ -33,7 +33,7 @@ export default function Header() {
                   },
                   {
                     title: "Calculadora dólar blue",
-                    href: "/dolar-blue"
+                    href: "/"
                   }
                 ]
               }}
@@ -62,7 +62,7 @@ export default function Header() {
                     href: "/"
                   },
                   {
-                    title: "Lemoncash",
+                    title: " Lemoncash",
                     href: "/"
                   }
                 ]
