@@ -1,0 +1,23 @@
+.navbarItem {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  list-style: none;
+}
+
+.navbarItemMain {
+  display: flex;
+}
+
+.navbarItemContent {
+  display: none;
+}
+
+.navbarItemContentActive {
+  display: block;
+}
+
+.hr {
+  margin: 6px 0;
+}

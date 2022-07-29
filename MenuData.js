@@ -1,24 +1,24 @@
 const MenuData = [
   {
-    title: "Calculadora dólar tarjeta",
+    title: "Calculadoras",
     href: "/"
   },
   {
-    title: "Simulador plazo fijo",
+    title: "Simuladores",
     href: "/simulador"
   },
   {
-    title: "Tarjeta Ualá",
-    href: "/"
-  },
-  {
-    title: "Tarjeta Lemoncash",
+    title: "Tarjetas",
     href: "/"
   },
   {
     title: "Noticias",
     href: "/"
   },
+  {
+    title: "Contacto",
+    href:"/"
+  }
 ]
 
 export default MenuData
