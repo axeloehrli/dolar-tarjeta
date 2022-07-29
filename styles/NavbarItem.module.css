@@ -1,13 +1,18 @@
 .navbarItem {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   color: white;
   list-style: none;
+  padding: 0 1rem;
+  transition: all 0.1s ease;
+  border-bottom: 1px solid rgb(151, 163, 151);
 }
 
 .navbarItemMain {
   display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
 }
 
 .navbarItemContent {
@@ -15,9 +20,14 @@
 }
 
 .navbarItemContentActive {
-  display: block;
+  padding-bottom: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-
-.hr {
-  margin: 6px 0;
+.navbarItemContentActive > p {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(236, 233, 233);
+  text-decoration: underline;
 }

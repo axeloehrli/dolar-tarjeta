@@ -41,13 +41,12 @@
 }
 
 .navbar {
-  max-width: 350px;
-  flex: 2;
+  max-width: 400px;
+  flex: 3;
   background-color: #598044;
-  padding: 1rem;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .navbarMask {

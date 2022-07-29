@@ -26,19 +26,46 @@ export default function Header() {
             <NavbarItem
               data={{
                 mainTitle: "Calculadoras",
-                contentTitles: ["Calculadora dólar tarjeta", "Calculadora dólar blue"]
+                contentTitles: [
+                  {
+                    title: "Calculadora dólar tarjeta",
+                    href: "/"
+                  },
+                  {
+                    title: "Calculadora dólar blue",
+                    href: "/dolar-blue"
+                  }
+                ]
               }}
             />
             <NavbarItem
               data={{
                 mainTitle: "Simuladores",
-                contentTitles: ["Plazo fijo Banco Nación", "Plazo fijo Banco Provincia"]
+                contentTitles: [
+                  {
+                    title: "Plazo fijo Banco Nación",
+                    href: "/"
+                  },
+                  {
+                    title: "Plazo fijo Banco Provincia",
+                    href: "/"
+                  }
+                ]
               }}
             />
             <NavbarItem
               data={{
                 mainTitle: "Tarjetas",
-                contentTitles: ["Ualá", "Lemoncash"]
+                contentTitles: [
+                  {
+                    title: "Ualá",
+                    href: "/"
+                  },
+                  {
+                    title: "Lemoncash",
+                    href: "/"
+                  }
+                ]
               }}
             />
             <NavbarItem
@@ -50,6 +77,7 @@ export default function Header() {
               data={{
                 mainTitle: "Contacto",
               }}
+              noBorder
             />
           </nav>
         </div>
