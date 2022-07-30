@@ -1,9 +1,8 @@
 import Image from "next/image"
 import styles from "../styles/Header.module.css"
 import MenuIcon from "../public/menu.svg"
+import CloseIcon from "../public/close.svg"
 import { useState, useEffect } from "react"
-import MenuData from "../MenuData"
-import Link from "next/link"
 import NavbarItem from "./NavbarItem"
 
 
@@ -16,13 +15,18 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerWrapper}>
+        <div className={styles.image}>
+          <Image width={30} height={30} src={MenuIcon} alt="menu" onClick={onMenuClick} />
+        </div>
         <h2 className={styles.h2}>Dólar tarjeta</h2>
-        <Image className={styles.image} width={30} height={30} src={MenuIcon} alt="menu" onClick={onMenuClick} />
         <div className={showMenu ? styles.navbarContainerActive : styles.navbarContainer} >
-          <div className={styles.navbarMask} onClick={onMenuClick}>
-
-          </div>
           <nav className={styles.navbar}>
+            <div className={styles.menuTop}>
+              <h2 className={styles.menuHeader}>Dólar Tarjeta</h2>
+              <div className={styles.menuClose}>
+                <Image width={30} height={30} src={CloseIcon} alt="menu" onClick={onMenuClick} />
+              </div>
+            </div>
             <NavbarItem
               data={{
                 mainTitle: "Calculadoras",
