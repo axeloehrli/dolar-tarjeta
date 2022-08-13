@@ -1,0 +1,14 @@
+.navbarItemMain {
+  color: #85BB65;
+  font-size: 24px;
+}
+
+.navbarItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: black;
+}
+.navbarItemContent > p {
+  padding-left: 10px;
+}

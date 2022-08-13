@@ -4,14 +4,32 @@ import DownIcon from "../public/down.svg"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function NavbarItem({ data, noBorder }) {
+export default function NavbarItem({ data }) {
   const [showContent, setShowContent] = useState(false)
   return (
-    <div className={styles.navbarItem} style={noBorder ? { borderBottom: "none" } : {}}>
-      <div className={styles.navbarItemMain}>
+    <div
+      className={styles.navbarItem}
+      onMouseOver={
+        () => {
+          if (data.contentTitles) {
+            setShowContent(true)
+          }
+        }
+      }
+      onMouseLeave={
+        () => {
+          if (data.contentTitles) {
+            setShowContent(false)
+          }
+        }
+      }
+    >
+      <div
+        className={styles.navbarItemMain}
+      >
         <p>{data.mainTitle}</p>
         {data.contentTitles &&
-          <Image src={DownIcon} alt="Open" onClick={() => setShowContent(prevState => !prevState)} />
+          <Image src={DownIcon} alt="Open" />
         }
 
       </div>

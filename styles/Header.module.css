@@ -45,6 +45,7 @@
 }
 
 .navbar {
+  max-width: 500px;
   width: 100%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
@@ -84,6 +85,7 @@
   .image {
     padding-left: 56px;
   }
+  
   .navbarParagraph {
     font-size: 20px;
   }
@@ -96,18 +98,22 @@
   .navbarContainer {
     position: initial;
     flex: 1;
+    width: 100%;
   }
 
   .navbarMask {
     display: none;
   }
 
+  .menuTop {
+    display: none;
+  }
+
   .navbar {
-    width: 100%;
-    max-width: initial;
-    background-color: initial;
     flex-direction: row;
-    justify-content: space-between;
+    box-shadow: none;
+    max-width: initial;
+    gap: 12px;
   }
 
   .navbarParagraph {
@@ -125,5 +131,9 @@
 
   .headerWrapper {
     padding: 14px 20px;
+  }
+
+  .menuHeader {
+    display: none;
   }
 }

@@ -4,13 +4,30 @@ import MenuIcon from "../public/menu.svg"
 import CloseIcon from "../public/close.svg"
 import { useState, useEffect } from "react"
 import NavbarItem from "./NavbarItem"
+import BigScreenNavbar from "./BigScreenNavbar"
+import SmallScreenNavbar from "./SmallScreenNavbar"
 
 
 export default function Header() {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(false)
   const onMenuClick = () => {
-    setShowMenu(prevState => !prevState)
+    setShowNavbar(prevState => !prevState)
   }
+
+  const [isBigScreen, setIsBigScreen] = useState()
+  useEffect(() => {
+    setIsBigScreen(window.innerWidth >= 1000 ? true : false)
+    window.addEventListener("resize", () => {
+      if (isBigScreen && window.innerWidth < 1000) {
+        setIsBigScreen(false)
+        return
+      }
+      if (!isBigScreen && window.innerWidth >= 1000) {
+        setIsBigScreen(true)
+        return
+      }
+    })
+  }, [isBigScreen])
 
   return (
     <header className={styles.header}>
@@ -19,8 +36,14 @@ export default function Header() {
           <Image width={30} height={30} src={MenuIcon} alt="menu" onClick={onMenuClick} />
         </div>
         <h2 className={styles.h2}>Dólar tarjeta</h2>
-        <div className={showMenu ? styles.navbarContainerActive : styles.navbarContainer} >
-          <nav className={styles.navbar}>
+        {isBigScreen ? <BigScreenNavbar /> : <SmallScreenNavbar showNavbar={showNavbar} toggle={onMenuClick}/>}
+      </div>
+    </header>
+  )
+}
+
+/* 
+<nav className={styles.navbar}>
             <div className={styles.menuTop}>
               <h2 className={styles.menuHeader}>Dólar Tarjeta</h2>
               <div className={styles.menuClose}>
@@ -83,9 +106,4 @@ export default function Header() {
               }}
               noBorder
             />
-          </nav>
-        </div>
-      </div>
-    </header>
-  )
-}
+          </nav> */

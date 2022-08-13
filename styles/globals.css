@@ -10,4 +10,40 @@ a {
   text-decoration: none;
 }
 
+/* Navbar */
+.smallScreenNav {
+  max-width: 500px;
+  position: fixed;
+  left: -200%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.smallScreenNav.active {
+  left: 0;
+}
+
+.smallScreenNavH2 {
+  padding-top: 16px;
+  padding-left: 16px;
+  margin: auto;
+  font-size: 2em;
+  color: #85BB65;
+}
+.smallScreenNavImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.smallScreenNavItems {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
