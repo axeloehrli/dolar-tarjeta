@@ -1,0 +1,118 @@
+.main {
+  padding: 20px;
+}
+.header {
+  color: rgb(34, 34, 34);
+  font-size: 24px
+}
+
+.inputs {
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.inputContainer > label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #85BB65;
+
+}
+
+.inputContainer > input {
+  padding: 8px;
+  border: 1px solid rgb(190, 190, 190);
+  font-size: 18px;
+}
+
+.inputContainer > input:focus {
+  outline: none;
+}
+
+.amountContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputLeft {
+  padding: 9.5px 14px;
+  background-color: #85BB65;
+  color: white;
+}
+
+.amountContainer > input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid rgb(190, 190, 190);
+  font-size: 18px;
+}
+
+.dropdown {
+  padding: 10px ;
+  min-width: 50px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  background-color: white;
+  border: 1px solid rgb(189, 189, 189);
+  border-top: none;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 12px;
+}
+
+.dropdown > p {
+  font-size: 18px;
+  color: rgb(39, 39, 39);
+}
+
+
+.button {
+  padding: 14px;
+  margin: 14px 0;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #85BB65;
+  color: white;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resultContainer > label {
+  color: #85BB65;
+  font-size: 18px;
+}
+
+.resultContainer > p {
+  font-size: 18px;
+}
+
+.info {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

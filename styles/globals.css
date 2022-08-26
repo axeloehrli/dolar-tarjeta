@@ -20,6 +20,7 @@ a {
   bottom: 0;
   background-color: white;
   transition: all 0.5s ease;
+  z-index: 10000;
 }
 
 .smallScreenNav.active {
@@ -46,4 +47,3 @@ a {
   flex-direction: column;
   gap: 8px;
 }
-

@@ -2,8 +2,8 @@ import styles from "../styles/SmallScreenNavbar.module.css"
 import CloseIcon from "../public/close.svg"
 import Image from "next/image"
 import SmallScreenNavbarItem from "./SmallScreenNavbarItem"
-import {useState} from "react"
-export default function SmallScreenNavbar({showNavbar, toggle}) {
+import { useState } from "react"
+export default function SmallScreenNavbar({ showNavbar, toggle }) {
   return (
     <nav className={showNavbar ? "smallScreenNav active" : "smallScreenNav"}>
       <div className="smallScreenNavImg" onClick={toggle}>
@@ -12,6 +12,7 @@ export default function SmallScreenNavbar({showNavbar, toggle}) {
       <h2 className="smallScreenNavH2">Dólar tarjeta</h2>
       <div className="smallScreenNavItems">
         <SmallScreenNavbarItem
+          toggle={toggle}
           data={{
             mainTitle: "Calculadoras",
             contentTitles: [
@@ -27,12 +28,13 @@ export default function SmallScreenNavbar({showNavbar, toggle}) {
           }}
         />
         <SmallScreenNavbarItem
+          toggle={toggle}
           data={{
             mainTitle: "Simuladores",
             contentTitles: [
               {
                 title: "Plazo fijo Banco Nación",
-                href: "/"
+                href: "/simuladores/banco-nacion"
               },
               {
                 title: "Plazo fijo Banco Provincia",
@@ -42,6 +44,7 @@ export default function SmallScreenNavbar({showNavbar, toggle}) {
           }}
         />
         <SmallScreenNavbarItem
+          toggle={toggle}
           data={{
             mainTitle: "Tarjetas",
             contentTitles: [
@@ -57,11 +60,13 @@ export default function SmallScreenNavbar({showNavbar, toggle}) {
           }}
         />
         <SmallScreenNavbarItem
+          toggle={toggle}
           data={{
             mainTitle: "Noticias",
           }}
         />
         <SmallScreenNavbarItem
+          toggle={toggle}
           data={{
             mainTitle: "Contacto",
           }}

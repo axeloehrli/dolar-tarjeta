@@ -1,6 +1,7 @@
+import Link from "next/link"
 import styles from "../styles/SmallScreenNavbarItem.module.css"
 
-export default function SmallScreenNavbarItem({ data }) {
+export default function SmallScreenNavbarItem({ data, toggle }) {
   return (
     <div className={styles.navbarItem}>
       <div className={styles.navbarItemMain}>
@@ -9,7 +10,9 @@ export default function SmallScreenNavbarItem({ data }) {
       {data.contentTitles &&
         <div className={styles.navbarItemContent}>
           {data.contentTitles.map(e =>
-            <p key={e.title}>{e.title} {"->"}</p>
+            <Link href={e.href} key={e.title} >
+              <p onClick={toggle}>{e.title} {"->"}</p>
+            </Link>
           )}
         </div>
       }

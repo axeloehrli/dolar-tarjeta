@@ -1,9 +1,10 @@
 .navbarItemMain {
   color: #85BB65;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .navbarItemContent {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   gap: 4px;
