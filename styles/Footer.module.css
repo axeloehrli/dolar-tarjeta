@@ -1,0 +1,33 @@
+.footer {
+  background-color: #85BB65;
+  padding: 6px;
+}
+
+.header {
+  width: fit-content;
+  margin: auto;
+  color: white;
+  padding: 10px;
+  font-size: 29px;
+}
+
+.bottom {
+  padding-bottom: 20px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  color: white;
+}
+.bottom > p {
+  cursor: pointer;
+}
+.copyright {
+  padding: 0 10px;
+  padding-bottom: 6px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}

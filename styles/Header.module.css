@@ -137,3 +137,12 @@
     display: none;
   }
 }
+ 
+@media (max-width: 340px) {
+  .image {
+    padding-left: 12px;
+  }
+  .headerWrapper {
+    padding: 14px 6px;
+  }
+}

@@ -15,7 +15,20 @@ export default function Header() {
   }
 
   const [isBigScreen, setIsBigScreen] = useState()
+  const [showSmallIcon, setShowSmallIcon] = useState()
   useEffect(() => {
+    setShowSmallIcon(window.innerWidth <= 340 ? true : false)
+    window.addEventListener("resize", () => {
+      if (showSmallIcon && window.innerWidth >= 340) {
+        setShowSmallIcon(false)
+        return
+      } 
+      if (!showSmallIcon && window.innerWidth < 340) {
+        setShowSmallIcon(true)
+        return
+      }
+    })
+
     setIsBigScreen(window.innerWidth >= 1000 ? true : false)
     window.addEventListener("resize", () => {
       if (isBigScreen && window.innerWidth < 1000) {
@@ -27,15 +40,15 @@ export default function Header() {
         return
       }
     })
-  }, [isBigScreen])
+  }, [isBigScreen, showSmallIcon])
 
   return (
     <header className={styles.header}>
       <div className={styles.headerWrapper}>
         <div className={styles.image}>
-          <Image width={30} height={30} src={MenuIcon} alt="menu" onClick={onMenuClick} />
+          <Image width={showSmallIcon ? 20 : 30} height={showSmallIcon ? 20 : 30} src={MenuIcon} alt="menu" onClick={onMenuClick} />
         </div>
-        <h2 className={styles.h2}>Dólar tarjeta</h2>
+        <h2 className={styles.h2}>Dólar Tarjeta</h2>
         {isBigScreen ? <BigScreenNavbar /> : <SmallScreenNavbar showNavbar={showNavbar} toggle={onMenuClick}/>}
       </div>
     </header>
