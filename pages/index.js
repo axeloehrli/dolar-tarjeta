@@ -6,6 +6,7 @@ import { formatRelative, parseISO } from 'date-fns'
 import DollarCalculation from "../classes/DollarCalculation"
 import { es } from "date-fns/locale"
 import Adsense, { GoogleAd } from '../components/GoogleAd'
+import CalculateButton from '../components/CalculateButton'
 export default function Home({ error, currentDollarInfo }) {
   const formatter = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS" })
   const [inputValue, setInputValue] = useState(1)
@@ -40,10 +41,7 @@ export default function Home({ error, currentDollarInfo }) {
               onChange={onInputChange}
             />
           </div>
-          <button
-            className={styles.button}
-            onClick={handleButtonClick}
-          >Calcular</button>
+          <CalculateButton handleClick={handleButtonClick}/>
           <div className={styles.infoContainer}>
             <p className={styles.infoP}>Costo en pesos:</p>
             <p className={styles.infoP}>{formatter.format(dollarCalculation.getCostInPesos())}</p>

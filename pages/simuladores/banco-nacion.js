@@ -2,7 +2,10 @@
 import styles from "../../styles/plazo-fijo-banco-nacion.module.css"
 import PlazoFijo from "../../classes/PlazoFijo"
 import { useState } from "react"
+import Head from "next/head"
+import BancoLogo from "../../public/banconacion.png"
 import Image from "next/image"
+import CalculateButton from "../../components/CalculateButton"
 export default function PlazoFijoBancoNacion() {
   const [plazoFijo, setPlazoFijo] = useState(new PlazoFijo({ rate: 0.695, amount: 50000, days: 30 }))
   const [amountInput, setAmountInput] = useState(50000)
@@ -35,9 +38,17 @@ export default function PlazoFijoBancoNacion() {
   const [showDropdown, setShowDropdown] = useState(false)
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Simulador Plazo Fijo Banco Nación</title>
+        <meta name='keywords' content='simulador plazo fijo banco nacion bna BNA dinero dolar interes inversion dolares' />
+        <meta name="description" content='Simulador de plazo fijo en el Banco Nación. Ingrese su monto inicial y el período de tiempo y obtenga los intereses ganados.' />
+      </Head>
       <main className={styles.main}>
         <h1 className={styles.header}>Simulador Plazo Fijo Banco Nación</h1>
         <div className={styles.inputs}>
+          <div>
+            <Image src={BancoLogo} alt="Banco Nación" />
+          </div>
           <div className={styles.inputContainer}>
             <label htmlFor="amount">Monto a invertir (ARS)</label>
             <div className={styles.amountContainer}>
@@ -59,12 +70,7 @@ export default function PlazoFijoBancoNacion() {
             >
             </input>
           </div>
-          <button
-            className={styles.button}
-            onClick={onButtonClick}
-          >
-            Calcular
-          </button>
+          <CalculateButton handleClick={onButtonClick}/>
           <div className={styles.results}>
             <div className={styles.resultContainer}>
               <label>Monto inicial:</label>
@@ -161,7 +167,7 @@ export default function PlazoFijoBancoNacion() {
         </div>
       </main>
       <aside className={styles.aside}>
-        
+
       </aside>
     </div >
   )

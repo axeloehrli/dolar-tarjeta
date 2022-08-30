@@ -17,6 +17,14 @@ const getDollarPrice = (req, res) => {
   })
 }
 
+const insertCalculateButtonClick = (element)  => {
+  pool.query(`INSERT INTO clicks (element) VALUES ('calculate_button')`, (err, res) => {
+    if(err) {
+      console.log(err);
+    }
+  })
+}
+
 const insertDollarPrice = (value) => {
   if (value === undefined && value === null) return;
   const sqlStatement = `INSERT INTO dolar_info (price) VALUES (${value})`
@@ -29,4 +37,4 @@ const insertDollarPrice = (value) => {
   })
 }
 
-module.exports = { getDollarPrice, insertDollarPrice }
+module.exports = { getDollarPrice, insertDollarPrice, insertCalculateButtonClick }

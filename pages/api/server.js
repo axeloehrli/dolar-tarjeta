@@ -4,6 +4,10 @@ const fetch = require("node-fetch")
 const cheerio = require("cheerio")
 const app = express()
 app.get("/", db.getDollarPrice)
+app.post("/", (req, res) => {
+  console.log("hello world");
+})
+app.post("/calculate-button-click", db.insertCalculateButtonClick)
 
 app.listen(9999, () => {
   console.log("Running on port 9999");
