@@ -24,7 +24,7 @@ export default function BigScreenNavbar() {
           contentTitles: [
             {
               title: "Plazo fijo Banco Nación",
-              href: "/"
+              href: "/simuladores/banco-nacion"
             },
             {
               title: "Plazo fijo Banco Provincia",
