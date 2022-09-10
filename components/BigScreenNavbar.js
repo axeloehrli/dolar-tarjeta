@@ -27,8 +27,8 @@ export default function BigScreenNavbar() {
               href: "/simuladores/banco-nacion"
             },
             {
-              title: "Plazo fijo Banco Provincia",
-              href: "/"
+              title: "Plazo fijo Banco Santander",
+              href: "/simuladores/banco-santander"
             }
           ]
         }}
