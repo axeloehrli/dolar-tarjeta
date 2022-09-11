@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang='es'>
       <Head>
+        <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4127654850827260"
           crossOrigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
