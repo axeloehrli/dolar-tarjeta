@@ -38,13 +38,17 @@ export default function BigScreenNavbar() {
           mainTitle: "Tarjetas",
           contentTitles: [
             {
+              title: "Mastercard",
+              href: "/tarjetas/mastercard"
+            },
+            {
               title: "Ualá",
               href: "/"
             },
             {
-              title: " Lemoncash",
+              title: "Lemoncash",
               href: "/"
-            }
+            },
           ]
         }}
       />

@@ -49,6 +49,10 @@ export default function SmallScreenNavbar({ showNavbar, toggle }) {
             mainTitle: "Tarjetas",
             contentTitles: [
               {
+                title: "Mastercard",
+                href: "/tarjetas/mastercard"
+              },
+              {
                 title: "Ualá",
                 href: "/"
               },

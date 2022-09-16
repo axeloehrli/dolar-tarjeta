@@ -23,7 +23,7 @@ export default function Home({ error, currentDollarInfo }) {
   return (
     <div className={styles.container}>
       <Head>
-      <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
+        <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar tarjeta</title>
         <meta name='keywords' content='dolar tarjeta calculadora convertir 45% impuesto ganancias 35% impuesto pais' />
         <meta name="description" content='Calculadora dolar tarjeta actualizada (35% PAÍS y 45% GANANCIAS)' />
@@ -42,7 +42,7 @@ export default function Home({ error, currentDollarInfo }) {
               onChange={onInputChange}
             />
           </div>
-          <CalculateButton handleClick={handleButtonClick}/>
+          <CalculateButton handleClick={handleButtonClick} />
           <div className={styles.infoContainer}>
             <p className={styles.infoP}>Costo en pesos:</p>
             <p className={styles.infoP}>{formatter.format(dollarCalculation.getCostInPesos())}</p>
