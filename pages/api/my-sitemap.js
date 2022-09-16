@@ -3,8 +3,9 @@ const { Readable } = require("stream");
 const func = async (req, res) => {
   // An array with your links
   const links = [
-    { url: "/simuladores/banco-nacion", changefreq: "daily", priority: 0.3 },
-    { url: "/simuladores/banco-santander", changefreq: "daily", priority: 0.3 },
+    { url: "/simuladores/banco-nacion", changefreq: "monthly", priority: 0.3 },
+    { url: "/simuladores/banco-santander", changefreq: "monthly", priority: 0.3 },
+    { url: "/tarjetas/mastercard", changefreq: "monthly", priority: 0.3 },
   ];
 
   // Create a stream to write to
