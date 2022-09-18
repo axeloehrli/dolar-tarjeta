@@ -7,7 +7,10 @@ app.get("/", db.getDollarPrice)
 app.post("/", (req, res) => {
   console.log("hello world");
 })
-app.post("/calculate-button-click", db.insertCalculateButtonClick)
+app.post("/calculate-button-click", (req, res) => {
+  db.insertCalculateButtonClick() 
+  res.write("hello world")
+})
 
 app.listen(9999, () => {
   console.log("Running on port 9999");
