@@ -4,7 +4,7 @@ export default function CalculateButton({ handleClick }) {
   const [clickCount, setClickCount] = useState(0)
   const saveClick = () => {
     try {
-      fetch("https://dolartarjeta.com.ar:9999/calculate-button-click", { method: "POST", mode: "no-cors" })
+      fetch("https://api.dolartarjeta.com.ar/calculate-button-click", { method: "POST", mode: "no-cors" })
     } catch (error) {
       console.log(error);
     }
