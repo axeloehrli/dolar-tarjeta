@@ -6,6 +6,7 @@ const func = async (req, res) => {
     { url: "/simuladores/banco-nacion", changefreq: "monthly", priority: 0.3 },
     { url: "/simuladores/banco-santander", changefreq: "monthly", priority: 0.3 },
     { url: "/tarjetas/mastercard", changefreq: "monthly", priority: 0.3 },
+    { url: "", changefreq: "monthly", priority: 0.9 },
   ];
 
   // Create a stream to write to
