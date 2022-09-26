@@ -42,6 +42,10 @@ export default function BigScreenNavbar() {
               href: "/tarjetas/mastercard"
             },
             {
+              title: "VISA",
+              href: "/tarjetas/visa"
+            },
+            {
               title: "Ualá",
               href: "/"
             },

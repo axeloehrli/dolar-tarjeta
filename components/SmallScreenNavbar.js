@@ -53,6 +53,10 @@ export default function SmallScreenNavbar({ showNavbar, toggle }) {
                 href: "/tarjetas/mastercard"
               },
               {
+                title: "VISA",
+                href: "/tarjetas/visa"
+              },
+              {
                 title: "Ualá",
                 href: "/"
               },

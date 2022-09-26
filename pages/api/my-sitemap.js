@@ -3,10 +3,11 @@ const { Readable } = require("stream");
 const func = async (req, res) => {
   // An array with your links
   const links = [
-    { url: "/simuladores/banco-nacion", changefreq: "monthly", priority: 0.3 },
-    { url: "/simuladores/banco-santander", changefreq: "monthly", priority: 0.3 },
-    { url: "/tarjetas/mastercard", changefreq: "monthly", priority: 0.3 },
-    { url: "", changefreq: "monthly", priority: 0.9 },
+    { url: "/simuladores/banco-nacion" },
+    { url: "/simuladores/banco-santander" },
+    { url: "/tarjetas/mastercard" },
+    { url:"/tarjetas/visa"},
+    { url: "" },
   ];
 
   // Create a stream to write to
@@ -15,7 +16,7 @@ const func = async (req, res) => {
   res.writeHead(200, {
     "Content-Type": "application/xml",
   });
-  
+
   const xmlString = await streamToPromise(
     Readable.from(links).pipe(stream)
   ).then((data) => data.toString());

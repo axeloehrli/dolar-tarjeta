@@ -7,7 +7,7 @@ export default function mastercard() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Tarjetas Mastercard</title>
+        <title>Tarjetas de crédito Mastercard</title>
         <meta name='keywords' content='tarjeta mastercard credito crédito banco black platinum clasica dolar bbva macro galicia nacion lujo costo viajes viajero mantenimiento argentina mejor mejores robo robos requisitos' />
         <meta name="description" content='Tarjetas Mastercard: Clásica, Gold, Platinum y Black' />
       </Head>
