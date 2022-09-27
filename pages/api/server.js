@@ -11,7 +11,8 @@ app.post("/", (req, res) => {
   console.log("hello world");
 })
 app.post("/calculate-button-click", (req, res) => {
-  db.insertCalculateButtonClick(req.body.userIp) 
+  const {userIp, lat, lng, city, region, country} = req.body
+  db.insertCalculateButtonClick(userIp) 
   res.write("hello world")
 })
 
