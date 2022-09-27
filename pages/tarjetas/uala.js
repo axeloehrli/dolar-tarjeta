@@ -55,7 +55,7 @@ export default function visa() {
         </div>
         <div className={styles.infoContainer}>
           <p>
-            Si cargas en efectivo menos de $20.000 al mes, no tienes que pagar ningún costo. Pero, si durante el mes quieres transferir entre $20.000 y $50.000, se realizará un cobro automático de 1%+ IVA sobre el importe de carga excedido. Pero, si cargas más de $50.000 en el mes, se cobrará 3,5% + IVA sobre el importe de carga excedido.
+            Si usted fuese a cargar menos de $20.000 al mes en efectivo, no tienes que pagar ningún costo. Pero, si durante el mes quieres transferir entre $20.000 y $50.000, se realizará un cobro automático de 1%+ IVA sobre el importe de carga excedido. Pero, si cargas más de $50.000 en el mes, se cobrará 3,5% + IVA sobre el importe de carga excedido.
           </p>
         </div>
         <div className={styles.infoContainer}>
