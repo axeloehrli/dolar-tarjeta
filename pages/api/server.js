@@ -12,6 +12,7 @@ app.post("/", (req, res) => {
 })
 app.post("/calculate-button-click", (req, res) => {
   const { userIp, lat, lng, city, region, country } = req.body
+  console.log(userIp, lat, lng, city, region, country);
   db.insertCalculateButtonClick(userIp, lat, lng, city, region, country)
   res.write("hello world")
 })
