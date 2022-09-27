@@ -17,7 +17,7 @@ export default function CalculateButton({ handleClick }) {
             'Content-Type': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify({userIp: "THIS IS MY FAKE IP"})
+          body: JSON.stringify({userIp: userIp})
         }
       )
     } catch (error) {

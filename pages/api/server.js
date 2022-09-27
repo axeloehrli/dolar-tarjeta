@@ -11,8 +11,7 @@ app.post("/", (req, res) => {
   console.log("hello world");
 })
 app.post("/calculate-button-click", (req, res) => {
-  console.log(req.body);
-  db.insertCalculateButtonClick("Fake ip") 
+  db.insertCalculateButtonClick(req.body.userIp) 
   res.write("hello world")
 })
 
