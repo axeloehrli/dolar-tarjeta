@@ -17,11 +17,20 @@ const getDollarPrice = (req, res) => {
   })
 }
 
-const insertCalculateButtonClick = (userIp, lat, lng, city, region, country)  => {
+const insertCalculateButtonClick = (userIp, lat, lng, city, region, country) => {
   pool.query(`INSERT INTO clicks (element, user_ip, lat, lng, city, region, country) VALUES ('calculate_button', '${userIp}', ${lat}, ${lng}, '${city}', '${region}', '${country}')`, (err, res) => {
-    if(err) {
+    if (err) {
       console.log(err);
     }
+  })
+}
+
+const getClicks = (req, res) => {
+  pool.query("SELECT * FROM clicks", (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.status(200).json(results.rows)
   })
 }
 
@@ -37,4 +46,4 @@ const insertDollarPrice = (value) => {
   })
 }
 
-module.exports = { getDollarPrice, insertDollarPrice, insertCalculateButtonClick }
+module.exports = { getDollarPrice, getClicks, insertDollarPrice, insertCalculateButtonClick }

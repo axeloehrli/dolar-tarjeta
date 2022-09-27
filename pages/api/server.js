@@ -7,6 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.get("/", db.getDollarPrice)
+app.get("/clicks", db.getClicks)
 app.post("/", (req, res) => {
   console.log("hello world");
 })
