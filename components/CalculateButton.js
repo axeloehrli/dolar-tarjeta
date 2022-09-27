@@ -8,6 +8,11 @@ export default function CalculateButton({ handleClick }) {
       const json = await res.json()
       const userIp = json.ip
 
+      const locationRes = await fetch(`https://ipwho.is/${userIp}`)
+      const locationJson = await locationRes.json()
+
+      console.log(locationJson);
+      
       fetch(
         "https://api.dolartarjeta.com.ar/calculate-button-click",
         {
