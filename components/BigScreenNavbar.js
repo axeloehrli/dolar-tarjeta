@@ -47,7 +47,7 @@ export default function BigScreenNavbar() {
             },
             {
               title: "Ualá",
-              href: "/"
+              href: "/tarjetas/uala"
             },
             {
               title: "Lemoncash",

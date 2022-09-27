@@ -58,7 +58,7 @@ export default function SmallScreenNavbar({ showNavbar, toggle }) {
               },
               {
                 title: "Ualá",
-                href: "/"
+                href: "/tarjetas/uala"
               },
               {
                 title: " Lemoncash",

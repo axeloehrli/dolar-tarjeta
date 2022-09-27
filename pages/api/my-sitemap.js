@@ -7,6 +7,7 @@ const func = async (req, res) => {
     { url: "/simuladores/banco-santander" },
     { url: "/tarjetas/mastercard" },
     { url:"/tarjetas/visa"},
+    { url:"/tarjetas/uala"},
     { url: "" },
   ];
 
