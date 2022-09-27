@@ -26,7 +26,7 @@ const insertCalculateButtonClick = (userIp, lat, lng, city, region, country) => 
 }
 
 const getClicks = (req, res) => {
-  pool.query("SELECT * FROM clicks", (error, results) => {
+  pool.query("SELECT * FROM clicks ORDER BY id DESC", (error, results) => {
     if (error) {
       throw error
     }
