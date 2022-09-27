@@ -12,12 +12,12 @@ export default function CalculateButton({ handleClick }) {
         "https://api.dolartarjeta.com.ar/calculate-button-click",
         {
           method: "POST",
-          mode: "no-cors",
+          mode: "cors",
           headers: {
             'Content-Type': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify({userIp: userIp})
+          body: JSON.stringify({userIp: "THIS IS MY FAKE IP"})
         }
       )
     } catch (error) {

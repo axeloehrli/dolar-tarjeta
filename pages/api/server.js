@@ -2,8 +2,10 @@ const express = require("express")
 const db = require("./queries")
 const fetch = require("node-fetch")
 const cheerio = require("cheerio")
+const cors = require("cors")
 const app = express()
 app.use(express.json())
+app.use(cors())
 app.get("/", db.getDollarPrice)
 app.post("/", (req, res) => {
   console.log("hello world");
