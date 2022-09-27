@@ -17,8 +17,8 @@ const getDollarPrice = (req, res) => {
   })
 }
 
-const insertCalculateButtonClick = (req, res)  => {
-  pool.query(`INSERT INTO clicks (element, user_ip) VALUES ('calculate_button', '${req.body}')`, (err, res) => {
+const insertCalculateButtonClick = (userIp)  => {
+  pool.query(`INSERT INTO clicks (element, user_ip) VALUES ('calculate_button', '${userIp}')`, (err, res) => {
     if(err) {
       console.log(err);
     }
