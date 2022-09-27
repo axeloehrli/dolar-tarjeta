@@ -8,7 +8,7 @@ app.post("/", (req, res) => {
   console.log("hello world");
 })
 app.post("/calculate-button-click", (req, res) => {
-  db.insertCalculateButtonClick("1.1.1.1.3") 
+  db.insertCalculateButtonClick(req.body.userIp) 
   res.write("hello world")
 })
 
