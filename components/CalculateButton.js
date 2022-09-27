@@ -13,6 +13,10 @@ export default function CalculateButton({ handleClick }) {
         {
           method: "POST",
           mode: "no-cors",
+          headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
           body: JSON.stringify({userIp: userIp})
         }
       )

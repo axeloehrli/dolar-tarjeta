@@ -3,12 +3,14 @@ const db = require("./queries")
 const fetch = require("node-fetch")
 const cheerio = require("cheerio")
 const app = express()
+app.use(express.json())
 app.get("/", db.getDollarPrice)
 app.post("/", (req, res) => {
   console.log("hello world");
 })
 app.post("/calculate-button-click", (req, res) => {
-  db.insertCalculateButtonClick(req.body.userIp) 
+  console.log(req.body);
+  db.insertCalculateButtonClick("Fake ip") 
   res.write("hello world")
 })
 
