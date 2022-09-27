@@ -12,7 +12,7 @@ export default function CalculateButton({ handleClick }) {
       const locationJson = await locationRes.json()
 
       console.log(locationJson);
-      
+
       fetch(
         "https://api.dolartarjeta.com.ar/calculate-button-click",
         {
@@ -22,7 +22,16 @@ export default function CalculateButton({ handleClick }) {
             'Content-Type': 'application/json'
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify({userIp: userIp})
+          body: JSON.stringify(
+            {
+              userIp: userIp,
+              lat: locationJson.lat,
+              lng: locationJson.lng,
+              city: locationJson.city,
+              region: locationJson.region,
+              country: locationJson.country,
+            }
+          )
         }
       )
     } catch (error) {
