@@ -7,13 +7,13 @@ export default function visa() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Tarjetas Ualá</title>
+        <title>Tarjeta Ualá</title>
         <meta name='keywords' content='tarjeta visa VISA credito crédito banco classic gold platinum signature platinum clasica dolar bbva macro galicia nacion lujo costo viajes viajero mantenimiento argentina mejor mejores robo robos requisitos' />
         <meta name="description" content='Tarjetas Mastercard: Clásica, Gold, Platinum y Black' />
       </Head>
       <main className={styles.main}>
         <div className={styles.infoContainer}>
-          <h1 className={styles.h1}>Tarjetas prepaga Ualá</h1>
+          <h1 className={styles.h1}>Tarjeta prepaga Ualá</h1>
           <p>
             Ualá es una gran opción para cualquier persona sin cuenta bancaria o tarjeta de crédito.
           </p>
