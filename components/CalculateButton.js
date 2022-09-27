@@ -2,9 +2,20 @@ import styles from "../styles/CalculateButton.module.css"
 import { useState } from "react"
 export default function CalculateButton({ handleClick }) {
   const [clickCount, setClickCount] = useState(0)
-  const saveClick = () => {
+  const saveClick = async () => {
     try {
-      fetch("https://api.dolartarjeta.com.ar/calculate-button-click", { method: "POST", mode: "no-cors" })
+      const res = await fetch("https://api.ipify.org/?format=json")
+      const json = await res.json()
+      const userIp = json.ip
+
+      fetch(
+        "https://api.dolartarjeta.com.ar/calculate-button-click",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify({userIp: userIp})
+        }
+      )
     } catch (error) {
       console.log(error);
     }
