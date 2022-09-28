@@ -10,9 +10,11 @@ export default function CalculateButton({ handleClick }) {
 
       const locationRes = await fetch(`https://ipwho.is/${userIp}`)
       const locationJson = await locationRes.json()
-
+      
+      const myApiUrl = process.env.NEXT_PUBLIC_MY_API_URL
+      
       fetch(
-        "https://api.dolartarjeta.com.ar/calculate-button-click",
+        `${myApiUrl}/calculate-button-click`,
         {
           method: "POST",
           mode: "cors",
