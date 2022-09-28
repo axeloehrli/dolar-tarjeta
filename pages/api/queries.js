@@ -17,6 +17,15 @@ const getDollarPrice = (req, res) => {
   })
 }
 
+const getInterestRates = (req, res) => {
+  pool.query("SELECT * FROM interest_rate ORDER BY fetched_at DESC", (error, results) => {
+    if (error) {
+      throw error
+    }
+    res.status(200).json(results.rows)
+  })
+}
+
 const insertCalculateButtonClick = (userIp, lat, lng, city, region, country) => {
   pool.query(`INSERT INTO clicks (element, user_ip, lat, lng, city, region, country) VALUES ('calculate_button', '${userIp}', ${lat}, ${lng}, '${city}', '${region}', '${country}')`, (err, res) => {
     if (err) {
@@ -34,7 +43,7 @@ const getClicks = (req, res) => {
   })
 }
 
-const insertDollarPrice = (value) => {
+const insertDollarPrice = value => {
   if (value === undefined && value === null) return;
   const sqlStatement = `INSERT INTO dolar_info (price) VALUES (${value})`
   const date = new Date()
@@ -46,4 +55,13 @@ const insertDollarPrice = (value) => {
   })
 }
 
-module.exports = { getDollarPrice, getClicks, insertDollarPrice, insertCalculateButtonClick }
+const insertInterestRate = value => {
+  const sqlStatement = `INSERT INTO interest_rate (value) VALUES (${value})`
+  pool.query(sqlStatement, (err, res) => {
+    if (err) {
+      console.log(err);
+    }
+  })
+}
+
+module.exports = { getDollarPrice, getInterestRates, getClicks, insertDollarPrice, insertInterestRate, insertCalculateButtonClick }

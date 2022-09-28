@@ -7,6 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.get("/", db.getDollarPrice)
+app.get("/interest-rates", db.getInterestRates)
 app.get("/clicks", db.getClicks)
 app.post("/", (req, res) => {
   console.log("hello world");
@@ -22,11 +23,11 @@ app.listen(9999, () => {
   console.log("Running on port 9999");
 })
 
-const scrapeWebsite = async () => {
+const scrapeWebsiteDollarPrice = async () => {
   try {
-    const req = await fetch("https://www.bna.com.ar/Personas");
-    const res = await req.text()
-    const $ = cheerio.load(res)
+    const res = await fetch("https://www.bna.com.ar/Personas");
+    const text = await res.text()
+    const $ = cheerio.load(text)
 
     const dollarValues = $("td:contains('Dolar U.S.A')")
 
@@ -44,8 +45,28 @@ const scrapeWebsite = async () => {
   }
 }
 
+const scrapeWebsiteInterestRate = async () => {
+
+  const res = await fetch("http://www.bcra.gob.ar/BCRAyVos/Plazos_fijos_online.asp");
+  const text = await res.text()
+  const $ = cheerio.load(text)
+
+  const td = $('td:contains("BANCO DE LA NACION ARGENTINA")')
+
+  let interestValue
+  td.siblings().each((i, el) => {
+    if (i === 1) {
+      interestValue = parseFloat($(el).text().replace(/%/g, ''))
+    }
+  })
+
+  const interestRate = interestValue / 100
+
+  return interestRate
+}
+
 const saveDollarPrice = async () => {
-  const newDollarPrice = await scrapeWebsite()
+  const newDollarPrice = await scrapeWebsiteDollarPrice()
   const prevDollarPrice = await fetchPrevDollarPrice()
   if (newDollarPrice === prevDollarPrice) {
     const date = new Date()
@@ -54,7 +75,18 @@ const saveDollarPrice = async () => {
   }
   /* If new price is different than prev price,
   push it to the database */
-  db.insertDollarPrice(await scrapeWebsite())
+  db.insertDollarPrice(await scrapeWebsiteDollarPrice())
+}
+
+const saveInterestRate = async  () => {
+  const prevInterestRate = await fetchPrevInterestRate()
+  const newInterestRate = await scrapeWebsiteInterestRate()
+  if (prevInterestRate === newInterestRate) {
+    const date = new Date()
+    console.log(date.getHours(), ":", date.getMinutes(), "Same interest rate");
+    return
+  }
+  db.insertInterestRate(newInterestRate)
 }
 
 const fetchPrevDollarPrice = async () => {
@@ -67,14 +99,26 @@ const fetchPrevDollarPrice = async () => {
   }
 }
 
-const schedule = (fn, time, isFirstTime) => {
+const fetchPrevInterestRate = async () => {
+  try {
+    const req = await fetch("http://localhost:9999/interest-rates")
+    const res = await req.json()
+    return parseFloat(res[0].value)
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const schedule = (fn1, fn2, time, isFirstTime) => {
   if (isFirstTime) {
-    fn()
+    fn1()
+    fn2()
   }
   setTimeout(() => {
-    fn()
-    schedule(fn, time, false)
+    fn1()
+    fn2()
+    schedule(fn1, fn2, time, false)
   }, time);
 }
 
-schedule(saveDollarPrice, 1800000, true)
+schedule(saveDollarPrice, saveInterestRate, 1800000, true)
