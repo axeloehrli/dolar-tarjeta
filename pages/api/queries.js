@@ -18,7 +18,7 @@ const getDollarPrice = (req, res) => {
 }
 
 const getInterestRates = (req, res) => {
-  pool.query("SELECT * FROM interest_rate ORDER BY fetched_at DESC", (error, results) => {
+  pool.query("SELECT * FROM interest_rates ORDER BY fetched_at DESC", (error, results) => {
     if (error) {
       throw error
     }
@@ -56,7 +56,7 @@ const insertDollarPrice = value => {
 }
 
 const insertInterestRate = value => {
-  const sqlStatement = `INSERT INTO interest_rate (value) VALUES (${value})`
+  const sqlStatement = `INSERT INTO interest_rates (value) VALUES (${value})`
   pool.query(sqlStatement, (err, res) => {
     if (err) {
       console.log(err);
