@@ -45,7 +45,6 @@ export default function CalculateButton({ handleClick }) {
         if (clickCount < 1) {
           saveClick()
           setClickCount(ps => ps + 1)
-          console.log("hello save");
         }
       }}
     >
