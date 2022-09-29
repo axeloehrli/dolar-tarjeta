@@ -29,7 +29,11 @@ export default function BigScreenNavbar() {
             {
               title: "Plazo fijo Banco Santander",
               href: "/simuladores/banco-santander"
-            }
+            },
+            {
+              title: "Plazo fijo Banco Credicoop",
+              href: "/simuladores/banco-credicoop"
+            },
           ]
         }}
       />
