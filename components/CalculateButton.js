@@ -42,9 +42,10 @@ export default function CalculateButton({ handleClick }) {
       className={styles.button}
       onClick={() => {
         handleClick()
-        if (clickCount < 5) {
+        if (clickCount < 1) {
           saveClick()
           setClickCount(ps => ps + 1)
+          console.log("hello save");
         }
       }}
     >
