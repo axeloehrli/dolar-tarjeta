@@ -6,8 +6,8 @@ import Head from "next/head"
 import BancoLogo from "../../public/banconacion.png"
 import Image from "next/image"
 import CalculateButton from "../../components/CalculateButton"
-export default function PlazoFijoBancoNacion() {
-  const [plazoFijo, setPlazoFijo] = useState(new PlazoFijo({ rate: 0.695, amount: 50000, days: 30 }))
+export default function PlazoFijoBancoNacion({ currentInterestRate }) {
+  const [plazoFijo, setPlazoFijo] = useState(new PlazoFijo({ rate: currentInterestRate, amount: 50000, days: 30 }))
   const [amountInput, setAmountInput] = useState(50000)
   const [daysInput, setDaysInput] = useState(30)
 
@@ -27,7 +27,7 @@ export default function PlazoFijoBancoNacion() {
     setPlazoFijo(
       new PlazoFijo(
         {
-          rate: 0.695,
+          rate: currentInterestRate,
           amount: amountInput,
           days: daysInput
         }
@@ -171,4 +171,23 @@ export default function PlazoFijoBancoNacion() {
       </aside>
     </div >
   )
+}
+
+export const getServerSideProps = async () => {
+  try {
+    const res = await fetch("http://localhost:9999/interest-rates")
+    const data = await res.json()
+
+    const currentInterestRate = data[0].value
+
+    console.log(currentInterestRate);
+    return {
+      props: { currentInterestRate }
+    }
+  } catch (error) {
+    console.log(error);
+    return {
+      props: { error: true }
+    }
+  }
 }
