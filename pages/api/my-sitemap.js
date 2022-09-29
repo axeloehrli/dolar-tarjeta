@@ -5,6 +5,7 @@ const func = async (req, res) => {
   const links = [
     { url: "/simuladores/banco-nacion" },
     { url: "/simuladores/banco-santander" },
+    { url: "/simuladores/banco-credicoop" },
     { url: "/tarjetas/mastercard" },
     { url:"/tarjetas/visa"},
     { url:"/tarjetas/uala"},
