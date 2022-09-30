@@ -19,9 +19,6 @@ export default function mastercard() {
             en todos los países. En esta lista realizamos una comparación
             entre todas las que se ofrecen en la Argentina.
           </p>
-          <div className={styles.image}>
-            <Image src={mastercardImage} alt="Tarjetas Mastercard" />
-          </div>
           <p>
             Si su tarjeta posee el logotipo de Mastercard, seguramente
             sea aceptada en todo el mundo. Y aunque todas las tarjetas

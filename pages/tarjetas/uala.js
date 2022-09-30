@@ -17,9 +17,6 @@ export default function visa() {
           <p>
             Ualá es una gran opción para cualquier persona sin cuenta bancaria o tarjeta de crédito.
           </p>
-          <div className={styles.image}>
-            <Image src={ualaImage} alt="Tarjetas Mastercard" />
-          </div>
         </div>
         <div className={styles.infoContainer}>
           <p>

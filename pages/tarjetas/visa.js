@@ -23,9 +23,6 @@ export default function visa() {
             que ofrece VISA y los principales bancos de Argentina
             que las ofrecen.
           </p>
-          <div className={styles.image}>
-            <Image src={visaImage} alt="Tarjetas Mastercard" />
-          </div>
         </div>
         <div className={styles.infoContainer}>
           <h2 className={styles.h2}>¿Qué tarjetas ofrece VISA?</h2>
