@@ -3,13 +3,15 @@ const { Readable } = require("stream");
 const func = async (req, res) => {
   // An array with your links
   const links = [
+    { url: "/" },
     { url: "/simuladores/banco-nacion" },
     { url: "/simuladores/banco-santander" },
     { url: "/simuladores/banco-credicoop" },
     { url: "/tarjetas/mastercard" },
-    { url:"/tarjetas/visa"},
-    { url:"/tarjetas/uala"},
-    { url: "" },
+    { url: "/tarjetas/visa" },
+    { url: "/tarjetas/uala" },
+    { url: "/tarjetas/lemoncash" },
+    { url: "/tarjetas/mercado-pago" },
   ];
 
   // Create a stream to write to

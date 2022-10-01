@@ -55,7 +55,11 @@ export default function BigScreenNavbar() {
             },
             {
               title: "Lemoncash",
-              href: "/"
+              href: "/tarjetas/lemoncash"
+            },
+            {
+              title: "Mercado Pago",
+              href: "/tarjetas/mercado-pago"
             },
           ]
         }}
