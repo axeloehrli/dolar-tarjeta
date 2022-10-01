@@ -25,7 +25,7 @@ export default function Home({ error, currentDollarInfo }) {
       <Head>
         <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar tarjeta</title>
-        <meta name='keywords' content='dolar tarjeta calculadora convertir 45% impuesto ganancias 35% impuesto pais' />
+        <meta name='keywords' content='dolar tarjeta calculadora calcular calculo cálculo hoy convertir 45% impuesto ganancias 35% impuesto pais' />
         <meta name="description" content='Calculadora dolar tarjeta actualizada (35% PAÍS y 45% GANANCIAS)' />
       </Head>
       <main className={styles.main}>
