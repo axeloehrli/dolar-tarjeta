@@ -23,6 +23,7 @@ export default function Home({ error, currentDollarInfo }) {
   return (
     <div className={styles.container}>
       <Head>
+        <link rel='canonical' href='https://dolartarjeta.com.ar' />
         <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar tarjeta</title>
         <meta name='keywords' content='dolar tarjeta calculadora calcular calculo cálculo hoy convertir 45% impuesto ganancias 35% impuesto pais' />
