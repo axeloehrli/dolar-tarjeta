@@ -34,6 +34,10 @@ export default function BigScreenNavbar() {
               title: "Plazo fijo Banco Credicoop",
               href: "/simuladores/banco-credicoop"
             },
+            {
+              title: "Plazo fijo Banco BBVA",
+              href: "/simuladores/banco-bbva"
+            },
           ]
         }}
       />

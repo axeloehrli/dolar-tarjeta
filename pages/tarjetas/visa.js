@@ -9,7 +9,7 @@ export default function visa() {
       <Head>
         <title>Tarjetas de crédito VISA</title>
         <meta name='keywords' content='tarjeta visa VISA credito crédito banco classic gold platinum signature platinum clasica dolar bbva macro galicia nacion lujo costo viajes viajero mantenimiento argentina mejor mejores robo robos requisitos' />
-        <meta name="description" content='Tarjetas Mastercard: Clásica, Gold, Platinum y Black' />
+        <meta name="description" content='Tarjetas VISA: Classic, Gold, Platinum y Signature' />
       </Head>
       <main className={styles.main}>
         <div className={styles.infoContainer}>

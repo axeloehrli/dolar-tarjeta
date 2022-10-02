@@ -12,6 +12,7 @@
 }
 
 .navbarItemContentActive {
+  z-index: 1000;
   background-color: white;
   position: absolute;
   width: 200px;
