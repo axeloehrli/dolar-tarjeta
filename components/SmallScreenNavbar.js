@@ -85,12 +85,6 @@ export default function SmallScreenNavbar({ showNavbar, toggle }) {
             mainTitle: "Noticias",
           }}
         />
-        <SmallScreenNavbarItem
-          toggle={toggle}
-          data={{
-            mainTitle: "Contacto",
-          }}
-        />
       </div>
     </nav>
   )

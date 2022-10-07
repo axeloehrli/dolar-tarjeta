@@ -73,11 +73,6 @@ export default function BigScreenNavbar() {
           mainTitle: "Noticias",
         }}
       />
-      <NavbarItem
-        data={{
-          mainTitle: "Contacto",
-        }}
-      />
     </nav>
   )
 }
