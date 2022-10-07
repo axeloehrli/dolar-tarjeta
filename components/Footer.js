@@ -5,14 +5,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <h2 className={styles.header}>Dólar Tarjeta</h2>
       <div className={styles.bottom}>
-        <Link href="https://www.instagram.com/axel_oehrli/">
-          <p>Contacto</p>
+        <Link href="/sobre-nosotros">
+          <p>Sobre nosotros</p>
         </Link>
-        <Link href="/">
+        <Link href="/politica-de-privacidad">
           <p>Política de privacidad</p>
         </Link>
-        <Link href="/">
-          <p>Política de cookies</p>
+        <Link href="/contacto">
+          <p>Contacto</p>
         </Link>
       </div>
       <p className={styles.copyright}>
