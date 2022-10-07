@@ -13,6 +13,9 @@ const func = async (req, res) => {
     { url: "/tarjetas/uala" },
     { url: "/tarjetas/lemoncash" },
     { url: "/tarjetas/mercado-pago" },
+    { url: "/tarjetas/sobre-nosotros" },
+    { url: "/tarjetas/contacto" },
+    { url: "/tarjetas/politica-de-privacidad" },
   ];
 
   // Create a stream to write to
