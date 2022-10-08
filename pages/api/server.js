@@ -1,3 +1,5 @@
+require("newrelic")
+
 const express = require("express")
 const db = require("./queries")
 const fetch = require("node-fetch")
