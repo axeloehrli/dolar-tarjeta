@@ -38,6 +38,10 @@ export default function BigScreenNavbar() {
               title: "Plazo fijo Banco BBVA",
               href: "/simuladores/banco-bbva"
             },
+            {
+              title: "Plazo fijo Banco Galicia",
+              href: "/simuladores/banco-galicia"
+            },
           ]
         }}
       />
