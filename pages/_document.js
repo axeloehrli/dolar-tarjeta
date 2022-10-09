@@ -5,9 +5,7 @@ export default function Document() {
   return (
     <Html lang='es'>
       <Head>
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4127654850827260"
-          crossOrigin="anonymous"></script>
+        <meta name="propeller" content="16c20c5f7699a57f4cbcd8f3fee0425f" />
         <script async type="text/javascript" src="/newrelic-meta.js" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
