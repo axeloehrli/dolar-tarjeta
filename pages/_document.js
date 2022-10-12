@@ -5,9 +5,9 @@ export default function Document() {
   return (
     <Html lang='es'>
       <Head>
-        <meta name="propeller" content="16c20c5f7699a57f4cbcd8f3fee0425f" />
+        {/* <meta name="propeller" content="16c20c5f7699a57f4cbcd8f3fee0425f" />
         <script async type="text/javascript" src="/propellerAds.js" />
-        <script async type="text/javascript" src="/propellerAds-vignette.js" />
+        <script async type="text/javascript" src="/propellerAds-vignette.js" /> */}
         <script async type="text/javascript" src="/newrelic-meta.js" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
