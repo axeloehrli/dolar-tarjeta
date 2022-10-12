@@ -4,6 +4,7 @@ const func = async (req, res) => {
   // An array with your links
   const links = [
     { url: "/" },
+    { url: "/dolar-qatar" },
     { url: "/simuladores/banco-nacion" },
     { url: "/simuladores/banco-santander" },
     { url: "/simuladores/banco-credicoop" },

@@ -21,6 +21,10 @@ export default function SmallScreenNavbar({ showNavbar, toggle }) {
                 href: "/"
               },
               {
+                title: "Calculadora dólar Qatar",
+                href: "/dolar-qatar"
+              },
+              {
                 title: "Calculadora dólar blue",
                 href: "/"
               }
