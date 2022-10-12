@@ -27,7 +27,7 @@ export default function Home({ error, currentDollarInfo }) {
         <link rel='canonical' href='https://dolartarjeta.com.ar' />
         <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar Qatar con impuestos</title>
-        <meta name='keywords' content='dolar tarjeta calculadora calcular calculo cálculo hoy convertir 45% impuesto ganancias 35% impuesto pais' />
+        <meta name='keywords' content='dolar qatar calculadora calcular calculo cálculo hoy convertir 45% impuesto ganancias 35% impuesto pais 25% bienes personales' />
         <meta name="description" content='Calculadora dolar tarjeta actualizada (35% PAÍS y 45% GANANCIAS)' />
       </Head>
       <main className={styles.main}>
@@ -73,7 +73,7 @@ export default function Home({ error, currentDollarInfo }) {
           <li className={styles.dolarTarjetaInfoContainer}>
             <h2>¿Qué es el Dólar Qatar?</h2>
             <p>
-              El dólar Qatares el que se pagará a
+              El dólar Qatar es el que se pagará a
               partir del 12/10 al realizar compras
               al extranjero o por utilización de servicios dolarizados.
               Se diferencia del dólar tarjeta ya que, además de
