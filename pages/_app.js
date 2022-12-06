@@ -6,12 +6,11 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <Script
-        id="Adsense-id"
-        data-ad-client="ca-pub-987************676"
-        async="true"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4127654850827260"
+        crossOrigin="anonymous">
+      </script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-RZK9G9W5ER`}
         strategy="afterInteractive"
