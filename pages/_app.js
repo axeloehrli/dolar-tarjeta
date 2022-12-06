@@ -7,6 +7,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-987************676"
+        async="true"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
+      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-RZK9G9W5ER`}
         strategy="afterInteractive"
       />
