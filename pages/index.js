@@ -23,6 +23,8 @@ export default function Home({ error, currentDollarInfo }) {
   return (
     <div className={styles.container}>
       <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4127654850827260"
+          crossOrigin="anonymous"></script>
         <link rel='canonical' href='https://dolartarjeta.com.ar' />
         <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar tarjeta</title>

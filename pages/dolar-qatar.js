@@ -24,6 +24,8 @@ export default function Home({ error, currentDollarInfo }) {
   return (
     <div className={styles.container}>
       <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4127654850827260"
+          crossOrigin="anonymous"></script>
         <meta name="google-site-verification" content="-zlK0Qapx3a1sAjVOesTRBIm96KqXmKPFA90hRNyCpA" />
         <title>Calculadora dólar Qatar con impuestos</title>
         <meta name='keywords' content='dolar qatar calculadora calcular calculo cálculo hoy convertir 45% impuesto ganancias 35% impuesto pais 25% bienes personales' />
@@ -121,18 +123,18 @@ export default function Home({ error, currentDollarInfo }) {
             <p>
               El dólar Qatar fue anunciado el fin de semana largo por el
               nuevo Ministro de Economía Sergio Massa, y tomará efecto a partir
-              del miércoles 12 de octubre del 2022. Se lo llamó dolar Qatar 
-              por el momento en el que fue anunciado, ya que se encuentra muy cerca 
+              del miércoles 12 de octubre del 2022. Se lo llamó dolar Qatar
+              por el momento en el que fue anunciado, ya que se encuentra muy cerca
               de la fecha del Campeonato Mundial de Fútbol, en el cual muchos
               argentinos viajarán a Qatar y gastaran grandes cantidades de dólares.
             </p>
             <p>
-              Esta medida fue tomada por el gobierno con la esperanza de 
-              reducir los 800 millones de dólares que escapan 
+              Esta medida fue tomada por el gobierno con la esperanza de
+              reducir los 800 millones de dólares que escapan
               del país todos los meses a raíz del turismo internacional.
             </p>
           </li>
-      
+
         </ul>
       </main>
       <aside className={styles.aside}>
